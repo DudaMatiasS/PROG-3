@@ -36,10 +36,10 @@ public class ListaSE{
                inserirNoInicio(c);
             }else{
             Celula aux2=primeiro.prox;
-           while(c.valor>aux.valor&&c.valor>aux2.valor&&aux2.prox!=null){
-            aux=aux.prox;
-            aux2=aux2.prox;
-                     }
+               while(c.valor>aux.valor&&c.valor>aux2.valor&&aux2.prox!=null){
+                  aux=aux.prox;
+                  aux2=aux2.prox;
+         }
 
 
           
