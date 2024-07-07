@@ -23,32 +23,35 @@ public class ListaSE{
          aux.prox=c;
       }
    }
+
+   //AINDA ACHO QUE EXISTEM ALGUMA FORMA DE MELHORAR MAS FUNCIONA :)
    public void inserirNoMeio(Celula c){
       if(verificarListaVazia()){
          inserirNoInicio(c);
       }else{
          Celula aux = primeiro;
          if(aux.prox==null){
-            System.out.println("inserir no final");
-            inserirNoFinal(c);
-         }else{
-            if(primeiro.valor>c.valor){
+            if(c.valor<aux.valor){
                inserirNoInicio(c);
             }else{
-            Celula aux2=primeiro.prox;
+            inserirNoFinal(c);
+            }
+         }else{
+            if(c.valor<aux.valor){
+               inserirNoInicio(c);
+            }else{
+            Celula aux2=aux.prox;
                while(c.valor>aux.valor&&c.valor>aux2.valor&&aux2.prox!=null){
                   aux=aux.prox;
                   aux2=aux2.prox;
-         }
-
-
-          
-           System.out.println(aux.valor+" "+aux2.valor);
-           aux.prox=c;
-           c.prox=aux2;
-          
-         }
-
+               }   
+               if(aux2.prox==null){
+                     inserirNoFinal(c);
+               }else{
+                  aux.prox=c;
+                  c.prox=aux2;
+               }
+            }
          }
       }
 
@@ -106,18 +109,18 @@ public class ListaSE{
          if(aux.prox==null && aux.valor==v){
             removerInicio();
          }else{
-            if(v==primeiro.valor){
+            if(v==aux.valor){
                removerInicio();
             }else{
+            //aqiu poderia ser um for?
              Celula anterior =primeiro;
-            while(aux.valor!=v){   
-               anterior = aux;
-               aux=aux.prox;
-            }
+               while(aux.valor!=v){   
+                  anterior = aux;
+                  aux=aux.prox;
+               }
             anterior.prox=aux.prox;
             }
          }
-         
       }
    }
    public void imprimirLista(){

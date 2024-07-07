@@ -14,14 +14,14 @@ class Principal {
       c1 = new Celula(40);
       listaSe.inserirNoFinal(c1);
 
-      // c1 = new Celula(0);
-      // listaSe.inserirNoMeio(c1);
+      c1 = new Celula(0);
+      listaSe.inserirNoMeio(c1);
       c1 = new Celula(55);
       listaSe.inserirNoMeio(c1);
       // listaSe.inserirNoFinal(c1);
        
 
-      // listaSe.removerValorEspecífico(30);
+      // listaSe.removerValorEspecífico(40);
       listaSe.imprimirLista();
      
       
