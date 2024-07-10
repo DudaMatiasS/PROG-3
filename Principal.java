@@ -30,32 +30,32 @@ class Principal {
 //        listaSe.removerValorEspecifico(5);
 //        listaSe.imprimirLista();
 
-        ListaSEC numeros = new ListaSEC();
+        ListaSEC listaSec = new ListaSEC();
 
         Celula n = new Celula(5);
-        numeros.inserirNoInicio(n);
+        listaSec.inserirNoInicio(n);
         n = new Celula(10);
-        numeros.inserirAoFinal(n);
+        listaSec.inserirAoFinal(n);
         n = new Celula(20);
-        numeros.inserirAoFinal(n);
+        listaSec.inserirAoFinal(n);
 
         n = new Celula(120);
-        numeros.inserirAoFinal(n);
+        listaSec.inserirAoFinal(n);
         n = new Celula(75);
-        numeros.inserirOrdenadamente(n);
+        listaSec.inserirOrdenadamente(n);
         n = new Celula(2);
-        numeros.inserirOrdenadamente(n);
+        listaSec.inserirOrdenadamente(n);
         n = new Celula(60);
-        numeros.inserirOrdenadamente(n);
+        listaSec.inserirOrdenadamente(n);
         n = new Celula(55);
-        numeros.inserirOrdenadamente(n);
+        listaSec.inserirOrdenadamente(n);
         n = new Celula(25);
-        numeros.inserirOrdenadamente(n);
+        listaSec.inserirOrdenadamente(n);
         n = new Celula(0);
-        numeros.inserirOrdenadamente(n);
+        listaSec.inserirOrdenadamente(n);
 
-        numeros.removerValorEspecifico(0);
-        numeros.imprimirLista();
+        listaSec.removerValorEspecifico(0);
+        listaSec.imprimirLista();
 
 
     }
